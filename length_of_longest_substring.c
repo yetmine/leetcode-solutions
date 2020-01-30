@@ -11,7 +11,7 @@ int lengthOfLongestSubstring(char * s){
 	memset((void*)arr, -1, 256*sizeof(int));
 	while(s[i])
 	{
-		if (arr[s[i]] > -1)
+		if (arr[s[i]] > start)
 			start = arr[s[i]];
 		arr[s[i]] = i;
 		max = max > i - start ? max : i - start;
